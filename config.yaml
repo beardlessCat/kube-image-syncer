@@ -1,9 +1,11 @@
 default:
   push_kubernetes: false
-  push_images: false
+  push_images: true
 
 kubernetes:
   version: v1.23.1
 
 images:
-  - docker.io/nginx:latest
+  - gcr.io/distroless/base
+  - gcr.io/google.com/cloudsdktool/cloud-sdk
+  - mcr.microsoft.com/powershell:nanoserve
